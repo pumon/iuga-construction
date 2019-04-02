@@ -174,7 +174,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 .navbar-brand {
     height: auto;
-    padding: 20px 15px;
+    padding:10px 0;
 }
 #navbar-menu {
     margin: 6px 0;
@@ -622,7 +622,7 @@ footer::after {
 /* Footer About */
 .footer_item .logo {
     margin-bottom: 15px;
-    width: 200px;
+    width: 180px;
 }
 .list-inline.footer_social_icon {
     margin: 32px 0 0;
