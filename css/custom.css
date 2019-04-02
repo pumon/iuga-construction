@@ -829,6 +829,9 @@ footer::after {
     #contact_form .btn.submit_btn {
         width: 168px;
     }
+    footer {
+        background: #C2DFFF;
+    }
 
 
 }
