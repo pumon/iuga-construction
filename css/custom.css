@@ -717,6 +717,7 @@ footer::after {
 
 /* Responsive Styles for various devices */
 @media (min-width: 1600px) {
+
     .container{ width: 1200px;}
     .carousel-inner > .item > a > img, .carousel-inner > .item > img {
         height: 740px;
@@ -782,6 +783,10 @@ footer::after {
 }
 
 @media (max-width: 991px) {
+    body{
+        overflow-x: hidden;
+
+    }
     .list-inline.info > li {
         padding: 0 12px 0 0;
     }
