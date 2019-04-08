@@ -1,3 +1,7 @@
+<?php
+include('../config.php');
+$quote=mysqli_query($conn,"Select * from quote");
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
@@ -21,6 +25,7 @@
         <!-- Custom stylesheet -->
         <link rel="stylesheet" href="../css/custom.css" />
         <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -66,7 +71,42 @@
            </div>
        </section>
 
-      
+       <section id="why_us">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="head_title">
+                            <h2>People Who Contacted</h2>
+                        </div>
+                    </div>
+                </div>
+                <table>
+  <thead>
+    <tr>
+      <th>SL.NO</th>
+      <th>NAME</th>
+      <th>EMAIL ID</th>
+      <th>MESSAGE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
+    $count=1;
+     while ($select_query_array=mysqli_fetch_array($quote)){
+        echo "<tr>";
+        echo "<td>".$count."</td>";
+        echo "<td>".$select_query_array['name']."</td>";
+        echo "<td>".$select_query_array['email']."</td>";
+        echo "<td>".$select_query_array['message']."</td>";
+        echo "</tr>";
+        $count=$count+1;
+     }
+     ?>
+  </tbody>
+</table>
+        </section>
+
+        
 
        
         <!-- JavaScript -->
